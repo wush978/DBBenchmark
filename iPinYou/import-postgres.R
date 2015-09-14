@@ -1,0 +1,5 @@
+library(RPostgreSQL)
+drv <- dbDriver("PostgreSQL")
+ip <- Sys.getenv("PG_PORT_5432_TCP_ADDR")
+port <- Sys.getenv("PG_PORT_5432_TCP_PORT")
+con <- dbConnect(drv, host = ip, port = port, user = "wush", password = "wush")
